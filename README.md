@@ -2,7 +2,6 @@
 
 ## Table of contents
 
-```ansi
-. root
-+-- local-setup - docker configuration to assist in the running of a local Kafka for modelling purposes
-```
+### local-setup
+
+creates a local running Docker instance of Zookeeper and Kafka in order to test local modelling capabilities
