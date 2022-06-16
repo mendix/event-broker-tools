@@ -1,0 +1,18 @@
+name: Lint Code Base
+
+on:
+  push:
+    branches-ignore: ["master", "main"]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Lint Code Base
+        uses: ibiqlik/action-yamllint@v3
