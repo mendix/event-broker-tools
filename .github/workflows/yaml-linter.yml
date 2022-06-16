@@ -1,10 +1,13 @@
+---
+
 name: Lint Code Base
 
 on:
   push:
-    branches-ignore: ["master", "main"]
+    branches-ignore: ["master","main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+
 jobs:
   run-lint:
     runs-on: ubuntu-latest
@@ -16,3 +19,5 @@ jobs:
 
       - name: Lint Code Base
         uses: ibiqlik/action-yamllint@v3
+        with:
+          config_data: "{extends: default, rules: {line-length: disable}}"
