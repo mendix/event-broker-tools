@@ -5,7 +5,14 @@ The main component is a Docker compose file, so you quickly have the local resou
 
 Should you need to install Docker on your local machine, you can get downloads and instructions [here](https://docs.docker.com/engine/install/)
 
-If you are using `Microsoft's Visual Studio Code`, then installing the `Docker for Visual Studio Code` extension by Microsoft from the Marketplace can be useful.  Having this extension will allow you to right click on the docker-compose.yml file and simply select `Compose Up`
+If you are using `Microsoft's Visual Studio Code`:
+
+* Clone this github repository to your local machine
+* Install the `Docker for Visual Studio Code` extension by Microsoft from the Marketplace.
+* Open the docker-compose.yml file.
+* Right click on the docker-compose.yml file and simply select `Compose Up`
+
+Your docker image should now be running!
 
 ## Preparing the Docker environment
 
