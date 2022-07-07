@@ -3,6 +3,17 @@
 This project helps to get you quickly up and running using business events in Mendix.
 The main component is a Docker compose file, so you quickly have the local resources available to support using business events.
 
+Should you need to install Docker on your local machine, you can get downloads and instructions [here](https://docs.docker.com/engine/install/)
+
+If you are using `Microsoft's Visual Studio Code`:
+
+* Clone this github repository to your local machine
+* Install the `Docker for Visual Studio Code` extension by Microsoft from the Marketplace.
+* Open the docker-compose.yml file.
+* Right click on the docker-compose.yml file and simply select `Compose Up`
+
+Your docker image should now be running!
+
 ## Preparing the Docker environment
 
 You will need to have Docker installed, and Docker should have access to about 2GB of RAM.
