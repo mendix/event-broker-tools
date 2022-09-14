@@ -29,26 +29,34 @@ If you want to know for sure if kafka is ready you can run `docker exec kafka ka
 To clean up the containers and volumes used, use `docker compose down -v` or `docker-compose down -v`.
 This will also remove all the data, including any messages send.
 
-## Configuring the module for local setup
+## Setting constants for running your app locally
 
-If you are running Docker on Windows:
+Set these constant values in your Mendix application.
 
-Install the `BusinessEvent` module in your project in Studio Pro (currently it's build for version 9.0.5).
-In the settings of the App, add the following constants:
+### Windows
+
+If you are running Docker on Windows, install the `BusinessEvent` module in your project in Studio Pro (currently it's build for version 9.18.0). In the settings of the App, add the following constants:
 
 - `BusinessEvents.ChannelName`:`local`
 - `BusinessEvents.ServerUrl`:`localhost:9092`
 
+### MacOS or Linux
 If you are on macOS or Linux, and running Docker in another environment than Mendix, you might need to specify the ip address for the server instead of relying on localhost.
+
+#### MacOS
 For Docker running on MacOS, and Studio Pro running on Windows via Parallels, use the settings below:
 
 - `BusinessEvents.ChannelName`:`local`
 - `BusinessEvents.ServerUrl`:`10.211.55.2:9094`
 
+#### Linux
 For Docker running on Linux, with Studio Pro running on Windows via VirtualBox/KVM, identify the IP address of the host that the virtual machine can access and use it for `BusinessEvents.ServerUrl`
 
 - `BusinessEvents.ChannelName`:`local`
 - `BusinessEvents.ServerUrl`:`<IP ADDRESS>:9094`
+
+
+## Receiving events
 
 You can use a different value for the `ChannelName` as the supporting topic will be automatically created.
 Make sure the `BusinessEvents.Username` and `BusinessEvents.Password` are **not** set, as the local setup doesn't use them.
