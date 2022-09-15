@@ -35,7 +35,7 @@ Set these constant values in your Mendix application.
 
 ### Windows
 
-If you are running Docker on Windows, install the `BusinessEvent` module in your project in Studio Pro (currently it's build for version 9.18.0). In the settings of the App, add the following constants:
+If you are running Docker on Windows, install the `BusinessEvent` module in your project in Studio Pro (currently it's built for version 9.18.0). In the settings of the App, add the following constants:
 
 - `BusinessEvents.ChannelName`:`local`
 - `BusinessEvents.ServerUrl`:`localhost:9092`
