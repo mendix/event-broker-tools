@@ -4,7 +4,7 @@
 
 The examples provided in this setup is purely for illustration and is not intended to be a reference architecture for deployment of Apache Zookeeper and/or Apache Kafka.
 
-This example file will provide a 3 node cluster of Apache Zookeeper and a 3 node cluster of Apache Kafka using version 6.2.6 from Confluent.
+This example file will provide a 3 node cluster of Apache Zookeeper and a 3 node cluster of Apache Kafka using version 6.2.6 from Confluent which implements Kafka version set of 2.8.x.
 
 ## Startup
 
