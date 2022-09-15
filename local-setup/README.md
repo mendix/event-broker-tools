@@ -17,10 +17,8 @@ Your docker image should now be running!
 ## Preparing the Docker environment
 
 You will need to have Docker installed, and Docker should have access to about 2GB of RAM.
-New versions of Docker come with docker-compose integrated.
 
-If you have a recent install you can use `docker compose up -d`, for older ones with a separate docker-compose use `docker-compose up -d`.
-Depending on whether you already have the images, this could take quite some time.
+If you have Docker v2 or above, you can use `docker compose up -d`. For Docker v1, use `docker-compose up -d`. Depending on whether you already have the images, this could take quite some time.
 
 If you want to know for sure if kafka is ready you can run `docker exec kafka kafka-topics --list --exclude-internal --bootstrap-server localhost:19092` it list all the topics, which should be empty as long as you did not connect a Mendix app yet.
 
@@ -49,6 +47,8 @@ For Docker running on MacOS, and Studio Pro running on Windows via Parallels, us
 - `BusinessEvents.ChannelName`:`local`
 - `BusinessEvents.ServerUrl`:`10.211.55.2:9094`
 
+Note that is is not possible to run Docker from your Windows VM in Parallels. 
+
 #### Linux
 For Docker running on Linux, with Studio Pro running on Windows via VirtualBox/KVM, identify the IP address of the host that the virtual machine can access and use it for `BusinessEvents.ServerUrl`
 
@@ -70,3 +70,5 @@ docker exec kafka /bin/kafka-console-consumer --topic local --from-beginning --b
 Optionally add `--property print.headers=true` to also see the headers and not just the data.
 This might be useful to see the `ce_sourcename` (SourceName) `ce_type` (EventName) values.
 It should display all the send events in JSON, and keep listening for new events, use `Ctrl+c` to exit.
+
+It's possible that you'll see `WARN` log messages as the container is first starting up due to timing issues. It's only an issue if these messages persist. 
