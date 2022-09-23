@@ -1,6 +1,6 @@
 # Business events local setup
 
-This project helps to get you quickly up and running using business events in Mendix.
+This project helps to get you quickly up and running using [Mendix Business Events](https://docs.mendix.com/appstore/modules/business-events/).
 The main component is a Docker compose file, so you quickly have the local resources available to support using business events.
 
 Should you need to install Docker on your local machine, you can get downloads and instructions [here](https://docs.docker.com/engine/install/)
