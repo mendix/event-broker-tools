@@ -43,7 +43,7 @@ If you are on macOS or Linux, and running Docker in another environment than Men
 For Docker running on MacOS, and Studio Pro running on Windows via Parallels, use the settings below:
 
 - `BusinessEvents.ChannelName`:`local`
-- `BusinessEvents.ServerUrl`:`10.211.55.2:9094`
+- `BusinessEvents.ServerUrl`:`10.211.55.2:9094`l
 
 For Docker running on Linux, with Studio Pro running on Windows via VirtualBox/KVM, identify the IP address of the host that the virtual machine can access and use it for `BusinessEvents.ServerUrl`
 
@@ -52,6 +52,10 @@ For Docker running on Linux, with Studio Pro running on Windows via VirtualBox/K
 
 You can use a different value for the `ChannelName` as the supporting topic will be automatically created.
 Make sure the `BusinessEvents.Username` and `BusinessEvents.Password` are **not** set, as the local setup doesn't use them.
+
+If you run into an error that `The requested image's platform (linux/amd64) does not match the detected host platform`, add this setting:
+
+- `platform: linux/arm64`
 
 To be sure the events are received locally you can run (change the topic if you used a different one):
 
