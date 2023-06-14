@@ -61,6 +61,10 @@ For Docker running on Linux, with Studio Pro running on Windows via VirtualBox/K
 You can use a different value for the `ChannelName` as the supporting topic will be automatically created.
 Make sure the `BusinessEvents.Username` and `BusinessEvents.Password` are **not** set, as the local setup doesn't use them.
 
+If you run into an error that `The requested image's platform (linux/amd64) does not match the detected host platform`, add this line to both the zookeeper `zk` and kafka sections of the yaml file:
+
+- `platform: linux/arm64`
+
 To be sure the events are received locally you can run (change the topic if you used a different one):
 
 ```bash
